@@ -39,8 +39,6 @@ brew reinstall pmer-vim --HEAD
 
 # Formulae List
 
-## pmer-vim
+## [pmer-vim](https://github.com/pmer/vim)
 
 Vim with some modifications I made.
-
-Published here at the [pmer/vim](https://github.com/pmer/vim) repo.
