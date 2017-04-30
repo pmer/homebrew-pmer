@@ -5,7 +5,6 @@ class PmerMacvim < Formula
     system "./configure", "--enable-multibyte",
                           "--with-macarchs=#{MacOS.preferred_arch}",
                           "--with-tlib=ncurses",
-                          "--with-compiledby=Homebrew",
                           "--with-local-dir=#{HOMEBREW_PREFIX}"
 
     system "make"
