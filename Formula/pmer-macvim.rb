@@ -10,9 +10,7 @@ class PmerMacvim < Formula
     system "make"
 
     prefix.install "src/MacVim/build/Release/MacVim.app"
-    inreplace "src/MacVim/mvim", %r{^# VIM_APP_DIR=\/Applications$},
-                                 "VIM_APP_DIR=#{prefix}"
-    bin.install "src/MacVim/mvim"
+    bin.install_symlink prefix/"MacVim.app/Contents/bin/mvim"
 
     # Create MacVim vimdiff, view, ex equivalents
     executables = %w[mvimdiff mview mvimex gvim gvimdiff gview gvimex]
