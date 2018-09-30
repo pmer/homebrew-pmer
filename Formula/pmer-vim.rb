@@ -5,6 +5,7 @@ class PmerVim < Formula
     system "./configure", "--prefix=#{HOMEBREW_PREFIX}",
                           "--mandir=#{man}",
                           "--enable-multibyte",
+                          "--enable-rubyinterp",
                           "--with-tlib=ncurses",
                           "--disable-nls",
                           "--enable-gui=no",

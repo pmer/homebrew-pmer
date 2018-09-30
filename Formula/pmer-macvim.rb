@@ -4,6 +4,7 @@ class PmerMacvim < Formula
   def install
     system "./configure", "--enable-multibyte",
                           "--with-macarchs=#{MacOS.preferred_arch}",
+                          "--enable-rubyinterp",
                           "--with-tlib=ncurses",
                           "--with-local-dir=#{HOMEBREW_PREFIX}"
 
