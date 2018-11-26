@@ -1,4 +1,7 @@
 class PmerMacvim < Formula
+  url "https://github.com/pmer/macvim/archive/pmer1.tar.gz"
+  sha256 "1f8d203474b7dfd588763e56aa560c9bb12784d1ff9e52f6cc93b3667b4540cf"
+
   head "https://github.com/pmer/macvim.git"
 
   def install
