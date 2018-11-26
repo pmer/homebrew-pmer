@@ -1,6 +1,6 @@
 class PmerMacvim < Formula
-  url "https://github.com/pmer/macvim/archive/pmer1.tar.gz"
-  sha256 "1f8d203474b7dfd588763e56aa560c9bb12784d1ff9e52f6cc93b3667b4540cf"
+  url "https://github.com/pmer/macvim/archive/1.tar.gz"
+  sha256 "94181e0b7d952088b37bba7b1e9da9b9c779edeeca7c9c7a65758b5c4d76cdf8"
 
   head "https://github.com/pmer/macvim.git"
 
