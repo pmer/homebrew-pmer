@@ -2,7 +2,7 @@ class PmerMacvim < Formula
   url "https://github.com/pmer/macvim/archive/1.tar.gz"
   sha256 "94181e0b7d952088b37bba7b1e9da9b9c779edeeca7c9c7a65758b5c4d76cdf8"
 
-  head "https://github.com/pmer/macvim.git"
+  head "https://github.com/pmer/macvim"
 
   def install
     system "./configure", "--enable-multibyte",

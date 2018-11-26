@@ -1,5 +1,8 @@
 class PmerVim < Formula
-  head "https://github.com/pmer/vim.git"
+  url "https://github.com/pmer/vim/archive/1.tar.gz"
+  sha256 "d60118264cd89f1614444da76129d0ad30deb006aa17123d64ba42833207a920"
+
+  head "https://github.com/pmer/vim"
 
   def install
     system "./configure", "--prefix=#{HOMEBREW_PREFIX}",
