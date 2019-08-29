@@ -17,7 +17,10 @@ class PmerMacvim < Formula
     bin.install_symlink prefix/"MacVim.app/Contents/bin/mvim"
 
     # Create MacVim vimdiff, view, ex equivalents
-    executables = %w[mvimdiff mview mvimex gvim gvimdiff gview gvimex]
+    executables = %w[
+      ex rview rvim view vim vimdiff
+      mvimdiff xxd mvimdiff mview mvimex gvim gvimdiff gview gvimex
+    ]
     executables.each { |e| bin.install_symlink "mvim" => e }
   end
 end
