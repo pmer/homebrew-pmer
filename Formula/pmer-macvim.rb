@@ -1,15 +1,22 @@
 class PmerMacvim < Formula
-  url "https://github.com/pmer/macvim/archive/1.tar.gz"
-  sha256 "94181e0b7d952088b37bba7b1e9da9b9c779edeeca7c9c7a65758b5c4d76cdf8"
+  url "https://github.com/pmer/macvim/archive/2.tar.gz"
+  sha256 "2adb0f79d469c8554c1cd314cdcb0efcb41989940c127c7ec5b9cf49f3fe8466"
 
   head "https://github.com/pmer/macvim"
 
+  depends_on :xcode => :build
+  depends_on "ruby"
+
+  conflicts_with "macvim"
+  conflicts_with "vim"
+
   def install
     system "./configure", "--enable-multibyte",
-                          "--with-macarchs=#{MacOS.preferred_arch}",
                           "--enable-rubyinterp",
+                          "--enable-terminal",
                           "--with-tlib=ncurses",
-                          "--with-local-dir=#{HOMEBREW_PREFIX}"
+                          "--with-local-dir=#{HOMEBREW_PREFIX}",
+                          "--disable-sparkle"
 
     system "make"
 
@@ -18,8 +25,9 @@ class PmerMacvim < Formula
 
     # Create MacVim vimdiff, view, ex equivalents
     executables = %w[
-      ex rview rvim view vim vimdiff
-      mvimdiff xxd mvimdiff mview mvimex gvim gvimdiff gview gvimex
+      vi vim vimdiff
+      gvim gvimdiff
+      mvimdiff
     ]
     executables.each { |e| bin.install_symlink "mvim" => e }
   end
